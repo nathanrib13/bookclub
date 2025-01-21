@@ -20,8 +20,8 @@ section {
     display: flex;
     flex-direction: column;
     padding: 20px;
-
 }
+
 header {
     display: flex;
     align-items: center;
@@ -37,7 +37,6 @@ header .logo {
     color: #09be03;
 }
 
-
 h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
@@ -52,6 +51,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0;
 }
 
 li {
@@ -83,7 +83,6 @@ li span {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
 }
 
 .progress-container-documentaries {
@@ -94,25 +93,22 @@ li span {
     gap: 10px;
     justify-content: center;
     align-items: center;
-
 }
 
-.book-cover{
+.book-cover {
     width: 100%;
-    max-width: 400px; /* Define um tamanho máximo para a imagem */
-    height: 300px; /* Define uma altura fixa para uniformizar */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 0 auto;
     display: block;
     object-fit: cover;
 }
-
 
 .member-progress {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-    
 }
 
 .member-progress-documentaries {
@@ -121,7 +117,6 @@ li span {
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
-    
 }
 
 .progress {
@@ -139,15 +134,16 @@ li span {
     margin-bottom: 15px;
 }
 
-.profile-photo{
+.profile-photo {
     width: 30px;
     height: 30px;
     border-radius: 100%;
 }
 
-.documentaries-list{
+.documentaries-list {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .status-container {
@@ -155,25 +151,26 @@ li span {
     align-items: center;
     margin: 10px 0;
 }
-.status-container-documentaries{
-display: flex;
-align-items: center;
-justify-content: center;
-}
 
+.status-container-documentaries {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .status-span {
     width: 200px;
     padding: 5px;
-    border: 2px solid #ccc; /* Linha ao redor */
+    border: 2px solid #ccc;
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
 }
-.status-span-container{
+
+.status-span-container {
     width: 200px;
-    border: 2px solid #ccc; /* Linha ao redor */
+    border: 2px solid #ccc;
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
@@ -181,78 +178,122 @@ justify-content: center;
 }
 
 .status-to-watch {
-    background-color: #e0e0e0; /* Cinza */
-    color: #000; /* Preto */
+    background-color: #e0e0e0;
+    color: #000;
     padding: 3px;
 }
 
 .status-watched {
     padding: 3px;
-    background-color: #4caf50; /* Verde */
-    color: #fff; /* Branco */
+    background-color: #4caf50;
+    color: #fff;
 }
 
 .documentary_cover {
     width: 100%;
-    max-width: 200px; /* Define um tamanho máximo para a imagem */
-    height: 300px; /* Define uma altura fixa para uniformizar */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 0 auto;
     display: block;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-.documentaries{
+.documentaries {
     display: flex;
     flex-direction: column;
 }
 
-.documentaries h2{
+.documentaries h2 {
     padding-bottom: 20px;
     padding-top: 40px;
     align-self: center;
 }
 
-  
-  .documentary-title {
-    align-self:flex-start;
+.documentary-title {
+    align-self: flex-start;
     font-size: 1.5em;
     margin-top: 19px;
     margin-bottom: 10px;
     color: #333;
-  }
-  
-  .documentary-details {
-    font-size: 0.9em; /* Fonte menor para os detalhes */
+}
+
+.documentary-details {
+    font-size: 0.9em;
     color: #555;
-  }
-  
-  .documentary-details .author {
+}
+
+.documentary-details .author {
     font-weight: bold;
-  }
-  
-  .documentary-details .year-country {
+}
+
+.documentary-details .year-country {
     font-style: italic;
     margin: 5px 0;
 }
 
 .documentary-details .synopsis {
-  font-size: 0.85em;
-  line-height: 1.4;
-  color: #666;
-  padding-bottom: 20px; 
-}
-  
-
-.duration{
-font-size: 0.85em;
-  line-height: 1.4;
-  color: #666;
-  margin-bottom: 10px;
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #666;
+    padding-bottom: 20px;
 }
 
+.duration {
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 10px;
+}
 
-.footer{
+.footer {
     align-self: center;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    li {
+        width: calc(50% - 20px);
+    }
+
+    .member-progress-documentaries {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .status-span,
+    .status-span-container {
+        width: 100%;
+    }
+
+    .documentary_cover {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        width: 100%;
+    }
+
+    header .logo {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .documentary-title {
+        font-size: 1.2em;
+    }
+
+    .documentary-details {
+        font-size: 0.8em;
+    }
+
+    .book-cover {
+        height: auto;
+    }
+}
