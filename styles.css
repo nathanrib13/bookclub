@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+    color: #09be03;
+}
+
+header .logo {
+    font-size: 34px;
+    font-weight: bold;
+    color: #09be03;
+}
+
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #444;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    align-self: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li img {
+    max-width: 100px;
+    border-radius: 4px;
+}
+
+li span {
+    font-weight: bold;
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.progress-container-documentaries {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.book-cover{
+    width: 100%;
+    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    height: 300px; /* Define uma altura fixa para uniformizar */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block;
+    object-fit: cover;
+}
+
+
+.member-progress {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    
+}
+
+.member-progress-documentaries {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.documentaries-list{
+    display: flex;
+    flex-direction: row
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.status-container-documentaries{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.status-span {
+    width: 200px;
+    padding: 5px;
+    border: 2px solid #ccc; /* Linha ao redor */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.status-span-container{
+    width: 200px;
+    border: 2px solid #ccc; /* Linha ao redor */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-to-watch {
+    background-color: #e0e0e0; /* Cinza */
+    color: #000; /* Preto */
+    padding: 3px;
+}
+
+.status-watched {
+    padding: 3px;
+    background-color: #4caf50; /* Verde */
+    color: #fff; /* Branco */
+}
+
+.documentary_cover {
+    width: 100%;
+    max-width: 200px; /* Define um tamanho máximo para a imagem */
+    height: 300px; /* Define uma altura fixa para uniformizar */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block;
+    object-fit: cover; 
+}
+
+.documentaries{
+    display: flex;
+    flex-direction: column;
+}
+
+.documentaries h2{
+    padding-bottom: 20px;
+    padding-top: 40px;
+    align-self: center;
+}
+
+  
+  .documentary-title {
+    align-self:flex-start;
+    font-size: 1.5em;
+    margin-top: 19px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .documentary-details {
+    font-size: 0.9em; /* Fonte menor para os detalhes */
+    color: #555;
+  }
+  
+  .documentary-details .author {
+    font-weight: bold;
+  }
+  
+  .documentary-details .year-country {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.documentary-details .synopsis {
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #666;
+  padding-bottom: 20px; 
+}
+  
+
+.duration{
+font-size: 0.85em;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+.footer{
+    align-self: center;
+}
+
