@@ -68,6 +68,20 @@ li {
     justify-content: space-between;
 }
 
+footer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte legível */
+    font-size: 14px; /* Tamanho do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-top: 1px solid #ddd; /* Linha separadora no topo */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Alinhamento central do texto */
+}
+
 @media (max-width: 768px) {
     li {
         width: calc(50% - 20px); /* Ajuste para 2 itens por linha */
@@ -351,3 +365,4 @@ li span {
         height: auto;
     }
 }
+
