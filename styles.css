@@ -52,6 +52,7 @@ ul {
     flex-wrap: wrap;
     gap: 20px;
     padding: 0;
+    margin: 0;
 }
 
 li {
@@ -59,12 +60,66 @@ li {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
+    width: calc(33.333% - 20px); /* Ajuste para 3 itens por linha */
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    li {
+        width: calc(50% - 20px); /* Ajuste para 2 itens por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        width: calc(100% - 20px); /* Ajuste para 1 item por linha */
+    }
+}
+
+.cover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.chosen-by {
+    position: absolute;
+    top: 5px;
+    right: 5px; /* Torna a posição relativa ao contêiner */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: translate(180%, -30%); /* Centra a borda no limite do contêiner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chosen-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .chosen-by {
+        right: 0; /* Ajusta a posição para telas menores */
+        transform: translate(180%, -30%); /* Mantém a proporção ajustada */
+    }
+
+    .chosen-photo {
+        width: 40px; /* Reduz o tamanho da imagem em telas menores */
+        height: 40px;
+    }
+}
+
+.chosen-by img {
+    margin-left: -10px; /* Sobreposição leve */
+    border: 3px solid #09be03
 }
 
 li img {
@@ -120,19 +175,18 @@ li span {
 }
 
 .progress {
+    position: relative;
     background-color: #e0e0e0;
+    height: 15px;
     border-radius: 5px;
-    height: 10px;
     overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.progress-bar {
-    height: 100%;
+  }
+  
+  .progress-bar {
     background-color: #4caf50;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
+    height: 100%;
+    position: relative;
+  }
 
 .profile-photo {
     width: 30px;
