@@ -119,6 +119,27 @@ footer {
     object-fit: cover;
 }
 
+.where-watch-prime{
+    position: absolute;
+    top: 1px;
+    right: 20px; 
+    object-fit: cover;
+}
+.where-watch-globoplay{
+    position: absolute;
+    top: 45px;
+    right: 20px; 
+    object-fit: cover;
+    max-width: 80px;
+}
+.where-watch-netflix{
+    position: absolute;
+    top: 30px;
+    right: 20px; 
+    object-fit: cover;
+    max-width: 60px;
+}
+
 @media (max-width: 480px) {
     .chosen-by {
         right: 0; /* Ajusta a posição para telas menores */
@@ -176,8 +197,18 @@ li span {
 
 .member-progress {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-size: 0.9rem;
+    gap: 8px;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.member-progress > span{
+    padding-top: 15px;
+    padding-right: 5px;
+
 }
 
 .member-progress-documentaries {
@@ -191,6 +222,14 @@ li span {
 .progress {
     position: relative;
     background-color: #e0e0e0;
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-late {
+    position: relative;
+    background-color: #f55151;
     height: 15px;
     border-radius: 5px;
     overflow: hidden;
@@ -250,6 +289,11 @@ li span {
     color: #000;
     padding: 3px;
 }
+.status-to-watch-late{
+    background-color: #f11e1e;
+    color: #ffffff;
+    padding: 3px;
+}
 
 .status-watched {
     padding: 3px;
@@ -287,6 +331,7 @@ li span {
 }
 
 .documentary-details {
+    position: relative;
     font-size: 0.9em;
     color: #555;
 }
